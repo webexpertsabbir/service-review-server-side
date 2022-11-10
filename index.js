@@ -1,8 +1,11 @@
-const { MongoClient, ServerApiVersion, ObjectId } = require('mongodb');
 const express = require('express');
 const cors = require('cors');
 const app = express();
+
 const port = process.env.PORT || 5000;
+
+const { MongoClient, ServerApiVersion, ObjectId } = require('mongodb');
+
 require('dotenv').config();
 
 app.use(cors());
@@ -28,13 +31,14 @@ async function run(){
             res.send(user)
         });
     }
+
     finally{
         
     }
-    run().catch(err => console.error(err));
+    
 }
 
-run();
+run().catch(err => console.error(err));
 
 app.get('/', (req, res) => {
     res.send('Photography server in running');
