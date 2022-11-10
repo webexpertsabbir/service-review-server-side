@@ -37,9 +37,9 @@ async function run(){
 run();
 
 app.get('/', (req, res) => {
-    res.send('Photography car server in running');
+    res.send('Photography server in running');
 });
 
 app.listen(port, () =>{
-    console.log(`Photography car server running on ${port}`)
+    console.log(`Photography server running on ${port}`)
 })
